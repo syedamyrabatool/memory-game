@@ -20,11 +20,11 @@ describe('Render a Basic Game', () => {
         cardCount={3}
       />
     );
-    expect(await screen.getByTestId('count_error')).toBeInTheDocument();
+    expect(screen.getByTestId('count_error')).toBeInTheDocument();
   });
 
   test('renders Basic Game with 2 cards and click a card to flip', async () => {
-    const { findByText, debug } =
+    const { debug } =
     render(
       <Game
         cardCount={2}

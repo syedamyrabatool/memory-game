@@ -4,13 +4,13 @@ export default {
   Game: styled.div`
     margin: 4rem 6rem;
     color: #24292e;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
   `,
-
-  Card: styled.div`
-
-  `,
+   CardGrid: styled.div`
+     display: flex;
+     flex-wrap: wrap;
+   `,
+  Card: styled.div``,
   ForeSide: styled.div`
     width: 12rem;
     height: 14rem;
@@ -54,9 +54,9 @@ export default {
   `,
   GameOver: styled.p`
     display: block;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 6rem 0;
+    margin: 0;
     text-align:center;
   `,
 }

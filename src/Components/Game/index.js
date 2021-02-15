@@ -87,16 +87,18 @@ const Game = (props) => {
   return (
      <>
        <SC.Game>
-         {cardCountEven
-           ? startGame(cardCount)
-           : <SC.Text data-testId='count_error'>
-               Error: Please check count of cards.
-               <br />Hint (Even number of Cards only)
-             </SC.Text>
-         }
          {matchedCards && matchedCards.length === matchCount &&
-            <SC.GameOver data-testid='end'>Game Over</SC.GameOver>
+           <SC.GameOver data-testid='end'>Game Over</SC.GameOver>
          }
+         <SC.CardGrid>
+           {cardCountEven
+             ? startGame(cardCount)
+             : <SC.Text data-testId='count_error'>
+                 Error: Please check count of cards.
+                 <br />Hint (Even number of Cards only)
+               </SC.Text>
+           }
+         </SC.CardGrid>
        </SC.Game>
      </>
   );
