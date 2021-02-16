@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <p>Memory Game</p>
       </header>
-      <Game cardCount={8} />
+      <Game cardCount={6} />
     </div>
   );
 }

@@ -4,35 +4,45 @@ export default {
   Game: styled.div`
     margin: 4rem 6rem;
     color: #24292e;
-    display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   `,
    CardGrid: styled.div`
      display: flex;
      flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
    `,
   Card: styled.div``,
   ForeSide: styled.div`
     width: 12rem;
     height: 14rem;
-    border: 2px solid #999;
     margin: 2rem;
-    border-radius: 5px;
     background-color: pink;
-    &:hover {
-      border: 2px solid green;
-      cursor: pointer;
-    }
+
     @media only screen and (max-width: 415px) {
       width: 6rem;
       height: 7rem;
       margin: 0.25rem;
     }
-
   `,
+  Image: styled.img`
+    height: 14rem;
+    width: 12rem;
+    &:hover {
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 415px) {
+      width: 6rem;
+      height: 7rem;
+    }
+  `,
+
   BackSide: styled.div`
     width: 12rem;
     height: 14rem;
-    border: 2px solid #999;
     margin: 2rem;
     border-radius: 5px;
     background-color: #86b0da;
@@ -45,18 +55,31 @@ export default {
       margin: 0.25rem;
     }
   `,
+
   Text: styled.p`
-    margin: 6rem 0;
+    font-size: 14px;
+    padding: 6rem 0;
     text-align:center;
     @media only screen and (max-width: 415px) {
-      margin: 3rem 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    &.card-title {
+      font-size: 20px;
     }
   `,
   GameOver: styled.p`
     display: block;
+    color: green;
     font-size: 18px;
     font-weight: bold;
     margin: 0;
     text-align:center;
+  `,
+
+  Button: styled.button`
+    margin: 1rem;
+    width: auto;
   `,
 }

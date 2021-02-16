@@ -11,6 +11,6 @@ test('renders Basic Card with fore side', () => {
       isMatched={false}
     />
   );
-  const linkElement = screen.getByText(/Click to Flip/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByTestId('clickMe')).toBeInTheDocument();
 });
